@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useLanguage } from "@/components/providers";
 import { Reveal, SectionKicker } from "@/components/ui";
+import { withBase } from "@/lib/paths";
 
 export function Certificates() {
   const { t } = useLanguage();
@@ -27,7 +28,7 @@ export function Certificates() {
           <li key={item.href}>
             <Reveal delay={index * 80}>
               <a
-                href={item.href}
+                href={withBase(item.href)}
                 target="_blank"
                 rel="noreferrer"
                 className="group block"

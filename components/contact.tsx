@@ -4,6 +4,7 @@ import { useState } from "react";
 import { profile } from "@/lib/content";
 import { useLanguage } from "@/components/providers";
 import { Reveal } from "@/components/ui";
+import { withBase } from "@/lib/paths";
 
 export function Contact() {
   const { t, lang } = useLanguage();
@@ -63,7 +64,7 @@ export function Contact() {
           {copied ? t.contact.copied : t.contact.copy}
         </button>
         <a
-          href={profile.resume}
+          href={withBase(profile.resume)}
           download
           className="border border-bg/20 px-4 py-2 font-mono text-[11px] tracking-[0.18em] uppercase transition-colors hover:bg-bg hover:text-fg"
         >
