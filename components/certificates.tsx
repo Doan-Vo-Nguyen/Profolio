@@ -36,7 +36,7 @@ export function Certificates() {
               >
                 <div className="relative overflow-hidden border border-line bg-fg transition-transform duration-500 group-hover:-translate-y-1">
                   <Image
-                    src={item.image}
+                    src={withBase(item.image)}
                     alt={item.title}
                     width={1600}
                     height={1132}
